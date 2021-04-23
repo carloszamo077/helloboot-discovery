@@ -2,7 +2,7 @@ spring:
   cloud:
     kubernetes:
       client:
-        namespace: helloboot-discovery
+        namespace: carloszamo077-dev
   application:
     name: helloboot-discovery
 
