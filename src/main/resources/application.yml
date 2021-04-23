@@ -2,9 +2,11 @@ spring:
   cloud:
     kubernetes:
       client:
-        namespace: myproject
+        namespace: 
+helloboot-discovery
   application:
-    name: helloboot
+    name: 
+helloboot-discovery
 
 simplecalculator:
   ribbon:
