@@ -29,4 +29,10 @@ public class CalculatorController {
 		Random random = new Random();
 		return calculatorService.add(random.nextInt(), random.nextInt());
 	}
+	
+	@GetMapping("/get")
+	public String get() {
+		log.info("Calling Calculator Service: simplecalculator");
+		return "GET";
+	}
 }

@@ -4,7 +4,7 @@ spring:
       client:
         namespace: carloszamo077-dev
   application:
-    name: helloboot-discovery
+    name: simplecalculator
 
 simplecalculator:
   ribbon:
@@ -13,3 +13,7 @@ simplecalculator:
     client:
       enabled: true
     ServerListRefreshInterval: 5000
+ribbon:
+  http:
+    client:
+      enabled: true
