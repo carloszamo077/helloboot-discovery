@@ -29,7 +29,20 @@ public class CalculatorController {
 		Random random = new Random();
 		return calculatorService.add(random.nextInt(), random.nextInt());
 	}
-	
+
+	@GetMapping("/getServices")
+	public String getServices() {
+		log.info("Calling Calculator Service: getServices");
+		return calculatorService.getServices();
+	}
+
+	@GetMapping("/scheduler")
+	public String scheduler() {
+		log.info("Calling Calculator Service: scheduler");
+
+		return calculatorService.scheduler();
+	}
+
 	@GetMapping("/get")
 	public String get() {
 		log.info("Calling Calculator Service: simplecalculator");

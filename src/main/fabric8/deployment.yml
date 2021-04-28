@@ -1,16 +1,8 @@
-metadata:
-  labels:
-    project: ${project.artifactId}
-    hystrix.enabled: true
-    hystrix.cluster: default
-    version: ${project.version}
 spec:
-  replicas: 1
+  replicas: 2
   template:
-    metadata:
-      labels:
-        project: ${project.artifactId}
-        hystrix.enabled: true
-        hystrix.cluster: default
-        version: ${project.version}
-      serviceAccount: ribbon
+    containers:
+      spec:
+        - env:
+          - name: JAVA_ENABLE_DEBUG
+            value: true

@@ -2,18 +2,24 @@ spring:
   cloud:
     kubernetes:
       client:
-        namespace: carloszamo077-dev
+        namespace: carloszamo077-2-dev
   application:
-    name: simplecalculator
+    name: helloboot-discovery
 
-simplecalculator:
+ribbon:
+  http:
+    client:
+      enabled: true
+      
+service-scheduler:
   ribbon:
+    retryableStatusCodes: 404,502,500
     eureka:
       enabled: false
     client:
       enabled: true
     ServerListRefreshInterval: 5000
-ribbon:
-  http:
-    client:
-      enabled: true
+    ConnectTimeout: 500
+    ReadTimeout: 500
+    MaxAutoRetries: 3
+    MaxAutoRetriesNextServer: 3
